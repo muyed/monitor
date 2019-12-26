@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="monitor-web" />
+        <module name="monitor-common" />
+        <module name="monitor-core" />
+        <module name="monitor-agent" />
+        <module name="monitor-lib" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="monitor" target="1.8" />
+      <module name="monitor-agent" target="1.8" />
+      <module name="monitor-common" target="1.8" />
+      <module name="monitor-core" target="1.8" />
+      <module name="monitor-lib" target="1.8" />
+      <module name="monitor-web" target="1.8" />
+      <module name="snt-monitor-client" target="1.8" />
+      <module name="snt-monitor-core" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

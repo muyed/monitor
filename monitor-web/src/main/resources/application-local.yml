@@ -1,0 +1,61 @@
+server:
+  port: 7001
+  compression:
+    enabled: true
+    min-response-size: 2048
+    mime-types:
+      -
+        application/json
+      -
+        application/xml
+      -
+        application/javascript
+      -
+        text/html
+      -
+        text/xml
+      -
+        text/plain
+      -
+        text/css
+
+tomcat:
+  accesslog:
+    buffered: true
+    directory: /usr/songshu/logs/http_access_log
+    enabled: true
+    file-date-format: .yyyy-MM-dd
+    pattern: '%t %{X-Forwarded-For}i %l %u "%{HOST}i" "%r" %s %b "%{sid}c" "%{snt_token}i" "%{snt_token}o" "%{Referer}i" "%{User-Agent}i" %D' #"%{xxx}r"  Format pattern for access logs. common，combined
+    prefix: access_log
+    rename-on-rotate: false
+    request-attributes-enabled: false
+    rotate: true
+    suffix: .log
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://snt-test-pub.mysql.rds.aliyuncs.com/snt_monitor?useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT%2B8
+    username: sntuic
+    password: 1qaz!QAZ
+
+dubbo:
+  application:
+    name: monitor-provider
+    qos-enable: false
+  registry:
+    address: zookeeper://47.99.215.186:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  scan:
+    basePackages: com.muye.monitor.service.api
+  provider:
+    version: 1.0.0
+    retries: 0
+    timeout: 5000
+  consumer:
+    version: 1.0.0
+    check: false
+    retries: 0
+    timeout: 5000
