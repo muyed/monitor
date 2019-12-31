@@ -56,7 +56,7 @@ public class MqUtil {
             result.setEndTime(new Date(speedContent.getEnd()));
             result.setSpeed(speedContent.getSpeed());
 
-            QUEUE.put(result);
+            QUEUE.offer(result);
 
         } catch (Exception e) {
             LOGGER.error("send mq failed", e);
