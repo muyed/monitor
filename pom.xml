@@ -15,7 +15,7 @@
 
     <properties>
         <monitor.version>1.0-SNAPSHOT</monitor.version>
-        <springboot.version>2.0.3.RELEASE</springboot.version>
+        <springboot.version>2.5.12</springboot.version>
         <spring.version>5.1.5.RELEASE</spring.version>
         <java.version>1.8</java.version>
     </properties>
